@@ -12,6 +12,83 @@
 
     <!-- Custom CSS -->
     <link href="./assets/css/thumbnail-gallery.css" rel="stylesheet">
+    <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+        background-color: #f1f1f1;
+	    height: 394px;
+	    top: 19px;
+	    left: 39px;
+	    width: 253px;
+	    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	    position: fixed;
+	    z-index: 1000000;
+	    padding: 0;
+
+    }
+
+    .rightside{
+    	
+    	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    	padding-top: 20px;
+    	height: 5000px;
+    	float: right;
+    	right: 20px;
+    	background-color: #f1f1f1;
+    	
+    }
+
+    .img-circle{
+    	border-radius: 50%;
+    	width: 100px;
+    	height: 100px;
+    	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    	-webkit-animation-name: Floatingx;
+	    -webkit-animation-duration: 3s;
+	    -webkit-animation-iteration-count: infinite;
+    }
+
+
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 15px);}
+    to {-webkit-transform: translate(0, -0px);    }    
+}
+    
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 15px);}
+    to {-moz-transform: translate(0, -0px);}    
+}
+
+
+    .image-section{
+    	clear:both;
+    }
+   
+
+    .collapsecls{
+	    background: white;
+	    padding: 10px;
+	    height: 167px;
+    }
+
+    .menuoption{
+    	display: none;
+    	background: white;
+    }
+    .nav>li>a{
+    	height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+  </style>
 </head>
 <body>
   <app-root>Loading...</app-root>
@@ -20,5 +97,13 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="./assets/js/bootstrap.min.js"></script>
+
+    <script>
+  	$(function(){
+  		$("#menuoption").on("click", function(){
+  			$(".menuoption").slideToggle();
+  		});
+  	});
+  </script>
 </body>
 </html>
