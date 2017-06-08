@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { DirectoryComponent } from './directory/directory.component';
 import { routing } from './app.routes';
 import { GalleryComponent } from './gallery/gallery.component';
+import { GalleryService } from './gallery/gallery.service';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [GalleryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
