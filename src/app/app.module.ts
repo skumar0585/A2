@@ -10,6 +10,7 @@ import { DirectoryComponent } from './directory/directory.component';
 import { routing } from './app.routes';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryService } from './gallery/gallery.service';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { GalleryService } from './gallery/gallery.service';
     AppComponent,
     HomeComponent,
     DirectoryComponent,
-    GalleryComponent
+    GalleryComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
