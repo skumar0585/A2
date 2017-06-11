@@ -4,11 +4,50 @@
     </div>     
 </div>
 
-<div class="col-lg-3 col-md-4 col-xs-6 thumb" *ngFor="let g of gallery">
+<!-- <div class="col-lg-3 col-md-4 col-xs-6 thumb" *ngFor="let g of gallery">
     <a class="thumbnail" href="#">
         <img class="img-responsive" [src]="g.data" alt="">
     </a>
+</div> -->
+
+<!-- <div class="col-lg-3 col-md-4 col-xs-6 thumb" *ngFor="let g of gallery">
+                <div class="thumbnail">
+                    <img class="card-img-top" [src]="g.img">
+                    <div class="card-block">
+                        <h4 class="card-title">Tawshif Ahsan Khan</h4>
+                        Someone famous in Source Title
+                        <div class="card-text">
+                            Tawshif is a web designer living in Bangladesh.
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card-footer">
+                        <span class="float-right">Joined in 2013</span>
+                        <span><i class=""></i>75 Friends</span>
+                    </div>
+                </div>
+            </div> -->
+
+<!-- ____________________________________________________________________________________________________ -->
+
+<!-- <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+    <div class="thumbnail">
+<div class="grid">
+  <div class="grid-sizer"></div>
+  <div class="grid-item" *ngFor="let g of gallery">
+     <img  [src]="g.img">
+  </div>
 </div>
+</div>
+</div>
+-->
+
+
+ <masonry>
+       <masonry-brick class="brick" *ngFor="let g of gallery">
+           <img [src]="g.img">
+        </masonry-brick>
+</masonry>
 
 
 
